@@ -1,7 +1,7 @@
 <p align="center"><img src="app/static/img/horizontal.png" alt="BookLibrary" height="200px"></p>
 
 # BookLibrary
-Simple Book library application written on flask with SQLite database.
+Simple book library application written in flask with SQLite database.
 
 ## Features
 * user login, logout, register, change password, update about-me information
