@@ -10,7 +10,7 @@ from wtforms.validators import Email, Length, DataRequired, EqualTo
 class LoginForm(FlaskForm):
     email = StringField('Email',
                         validators=[DataRequired(message=u"You forgot to fill in this item!"), Length(1, 64), Email(message=u"Are you sure this is your Email ?")])
-    password = PasswordField(u'password', validators=[DataRequired(message=u"You forgot to fill in this item!"), Length(6, 32)])
+    password = PasswordField(u'Password', validators=[DataRequired(message=u"You forgot to fill in this item!"), Length(6, 32)])
     remember_me = BooleanField(u"Keep me logged in", default=True)
     submit = SubmitField(u'Sign in')
 
@@ -18,8 +18,8 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     email = StringField('Email',
                         validators=[DataRequired(message=u"You forgot to fill in this item!"), Length(1, 64), Email(message=u"Are you sure this is your Email ?")])
-    name = StringField(u'username', validators=[DataRequired(message=u"You forgot to fill in this item!"), Length(1, 64)])
-    password = PasswordField(u'password',
+    name = StringField(u'Username', validators=[DataRequired(message=u"You forgot to fill in this item!"), Length(1, 64)])
+    password = PasswordField(u'Password',
                              validators=[DataRequired(message=u"You forgot to fill in this item!"), EqualTo('password2', message=u'Passwords must match'),
                                          Length(6, 32)])
     password2 = PasswordField(u'Confirm password again', validators=[DataRequired(message=u"You forgot to fill in this item!")])
