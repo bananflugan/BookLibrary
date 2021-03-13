@@ -14,7 +14,7 @@ def index():
     page = request.args.get('page', 1, type=int)
     pagination = User.query.order_by(User.id.desc()).paginate(page, per_page=10)
     users = pagination.items
-    return render_template("user.html", users=users, pagination=pagination, title=u"已注册用户")
+    return render_template("user.html", users=users, pagination=pagination, title=u"Registered user")
 
 
 @user.route('/<int:user_id>/')
