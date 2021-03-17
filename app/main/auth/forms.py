@@ -22,7 +22,7 @@ class RegistrationForm(FlaskForm):
     password = PasswordField(u'Password',
                              validators=[DataRequired(message=u"You forgot to fill in this item!"), EqualTo('password2', message=u'Passwords must match'),
                                          Length(6, 32)])
-    password2 = PasswordField(u'Confirm password again', validators=[DataRequired(message=u"You forgot to fill in this item!")])
+    password2 = PasswordField(u'Confirm password', validators=[DataRequired(message=u"You forgot to fill in this item!")])
     submit = SubmitField(u'registered')
 
     def validate_email(self, filed):
